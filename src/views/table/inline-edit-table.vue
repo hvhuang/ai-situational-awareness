@@ -1,39 +1,40 @@
 <template>
   <div class="app-container">
-    <el-table v-loading="listLoading" :data="list" border fit highlight-current-row style="width: 100%">
-      <el-table-column align="center" label="ID" width="80">
+    <h3>受攻击类型</h3>
+    <el-table v-loading="listLoading" :data="list" border fit highlight-current-row style="width: 90%; margin:0">
+      <el-table-column align="center" label="ID" width="120">
         <template slot-scope="{row}">
           <span>{{ row.id }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="180px" align="center" label="Date">
+      <el-table-column width="200px" align="center" label="时间">
         <template slot-scope="{row}">
           <span>{{ row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="120px" align="center" label="Author">
+      <el-table-column width="300px" align="center" label="访问IP">
         <template slot-scope="{row}">
           <span>{{ row.author }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column width="100px" label="Importance">
+      <el-table-column width="300px" align="center" label="目的IP">
         <template slot-scope="{row}">
-          <svg-icon v-for="n in + row.importance" :key="n" icon-class="star" class="meta-item__icon" />
+          <span>{{ row.author }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column class-name="status-col" label="Status" width="110">
+      <!-- <el-table-column class-name="status-col" label="Status" width="110">
         <template slot-scope="{row}">
           <el-tag :type="row.status | statusFilter">
             {{ row.status }}
           </el-tag>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
-      <el-table-column min-width="300px" label="Title">
+      <el-table-column min-width="300px" align="center" label="攻击类型">
         <template slot-scope="{row}">
           <template v-if="row.edit">
             <el-input v-model="row.title" class="edit-input" size="small" />
@@ -51,7 +52,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="Actions" width="120">
+      <!-- <el-table-column align="center" label="Actions" width="120">
         <template slot-scope="{row}">
           <el-button
             v-if="row.edit"
@@ -72,7 +73,7 @@
             Edit
           </el-button>
         </template>
-      </el-table-column>
+      </el-table-column> -->
     </el-table>
   </div>
 </template>

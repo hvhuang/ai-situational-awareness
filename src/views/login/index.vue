@@ -3,7 +3,7 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">AI态势感知系统</h3>
       </div>
 
       <el-form-item prop="username">
@@ -47,7 +47,7 @@
 
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
-      <div style="position:relative">
+      <!-- <div style="position:relative">
         <div class="tips">
           <span>Username : admin</span>
           <span>Password : any</span>
@@ -60,7 +60,7 @@
         <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
           Or connect with
         </el-button>
-      </div>
+      </div> -->
     </el-form>
 
     <el-dialog title="Or connect with" :visible.sync="showDialog">
@@ -216,6 +216,9 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
+  background-image: url("https://img0.baidu.com/it/u=3612597965,1770541226&fm=26&fmt=auto&gp=0.jpg");
+  background-position: center;
+  background-size: 100% 100%;
   .el-input {
     display: inline-block;
     height: 47px;

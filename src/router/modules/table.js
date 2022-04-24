@@ -8,7 +8,7 @@ const tableRouter = {
   redirect: '/table/complex-table',
   name: 'Table',
   meta: {
-    title: 'Table',
+    title: '威胁分析',
     icon: 'table'
   },
   children: [
@@ -22,13 +22,13 @@ const tableRouter = {
       path: 'drag-table',
       component: () => import('@/views/table/drag-table'),
       name: 'DragTable',
-      meta: { title: 'Drag Table' }
+      meta: { title: '受攻击类型' }
     },
     {
       path: 'inline-edit-table',
       component: () => import('@/views/table/inline-edit-table'),
       name: 'InlineEditTable',
-      meta: { title: 'Inline Edit' }
+      meta: { title: '受攻击类型' }
     },
     {
       path: 'complex-table',
